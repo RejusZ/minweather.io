@@ -121,6 +121,13 @@ html.hp body .bd .wp .navm .enfc ul li button {
   font-family: "Poppins";
   font-size: 25px;
 }
+html.hp body .bd .wp .navm .enfc ul li button.cw {
+  border: solid #ffffff 2px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 html.hp body .bd .wp .navm .enfc ul li button:hover {
   border-bottom: solid 2px white;
   color: #ffffff;
@@ -447,6 +454,13 @@ html.app body .bd .wp .navm .enfc ul li button {
   font-family: "Poppins";
   font-size: 25px;
 }
+html.app body .bd .wp .navm .enfc ul li button.cw {
+  border: solid #ffffff 2px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 html.app body .bd .wp .navm .enfc ul li button:hover {
   border-bottom: solid 2px white;
   color: #ffffff;
@@ -726,7 +740,7 @@ html.au body .bd .wp .hts {
   width: 100%;
   z-index: 1;
   height: 200px;
-  background-image: url(/app/styling/forest2.jpg);
+  background-image: url(forest2.jpg);
 }
 html.au body .bd .wp .hts .h1fc {
   flex-direction: row;
@@ -882,7 +896,7 @@ html.cu body .bd .wp .hts {
   width: 100%;
   z-index: 1;
   height: 200px;
-  background-image: url(/app/styling/forest2.jpg);
+  background-image: url(forest2.jpg);
 }
 html.cu body .bd .wp .hts .h1fc {
   flex-direction: row;
