@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+  <head>
+    <link rel="stylesheet" href="/app/styling/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MinWeather | Weather</title>
+  </head>
+  <body>
+    <div class="bd">
+      <div class="wp">
+        <nav>
+          <div class="ltc flex">
+            <div class="lc">
+              <h1>MinWeather</h1>
+            </div>
+            <div class="togglemenuc">
+              <div class="togglemenu">
+                <span class="sp1"></span>
+                <span class="sp2"></span>
+                <span class="sp3"></span>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="navm">
+          <div class="enfc">
+            <ul class="flex">
+              <li>
+                <a href="/html/index.html">
+                  <button onClick="cwahT">Homepage</button>
+                </a>
+              </li>
+              <li>
+                <a href="/html/au.html">
+                  <button>About Us</button>
+                </a>
+              </li>
+              <li>
+                <a href="./cu.html">
+                  <button>Contact Us</button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wapp">
+        <div class="bdim">
+          <div class="container flex">
+            <div class="search flex">
+              <input class="si" placeholder="Enter Location" type="text" />
+              <button class="sib">
+                <span class="material-symbols-outlined"> search </span>
+              </button>
+            </div>
+            <div class="top">
+              <div class="location">
+                <h1 class="lh">Location</h1>
+              </div>
+
+              <div class="temp">
+                <h1 class="tt">Temp.</h1>
+              </div>
+              <div class="description">
+                <h1 class="dt">Description</h1>
+              </div>
+            </div>
+            <div class="bcontain flex">
+              <div class="bottom flex">
+                <div class="feels flex">
+                  <h1 class="ft">-</h1>
+                  <h2>Feels Like</h2>
+                </div>
+                <div class="humidity">
+                  <h1 class="h2">- %</h1>
+                  <h2>Humidity</h2>
+                </div>
+                <div class="wind">
+                  <h1 class="wt">- KMH</h1>
+                  <h2>Winds</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/app/js/app.js"></script>
+  </body>
+</html>

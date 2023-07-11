@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+li {
+  list-style: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  color: #ffffff;
+}
+
+html.hp {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+}
+html.hp body .bd {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+html.hp body .bd .wp nav {
+  height: 5rem;
+}
+html.hp body .bd .wp nav .ltc {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+html.hp body .bd .wp nav .ltc .togglemenuc {
+  position: absolute;
+  right: 8%;
+  top: 2.7%;
+}
+html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu {
+  z-index: 100;
+  height: 30px;
+  width: 40px;
+}
+html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu span {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp1,
+html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp2 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+  position: absolute;
+  top: 10%;
+  left: -4%;
+  transform: rotate(45deg);
+}
+html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp3 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 11.87px;
+  transform: rotate(-45deg);
+}
+html.hp body .bd .wp nav .ltc .lc {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+html.hp body .bd .wp nav .ltc .lc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 300;
+}
+html.hp body .bd .wp .navm {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: -100%;
+}
+html.hp body .bd .wp .navm .enfc {
+  margin-top: 12em;
+}
+html.hp body .bd .wp .navm .enfc ul {
+  flex-direction: column;
+  align-items: center;
+}
+html.hp body .bd .wp .navm .enfc ul li {
+  margin-top: 5em;
+}
+html.hp body .bd .wp .navm .enfc ul li button {
+  background-color: transparent;
+  border: none;
+  font-weight: 200;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 25px;
+}
+html.hp body .bd .wp .navm .enfc ul li button:hover {
+  border-bottom: solid 2px white;
+  color: #ffffff;
+}
+@keyframes navmbH {
+  0% {
+    border-bottom: solid 2px white;
+  }
+}
+html.hp body .bd .wp .navm.active {
+  top: 6%;
+  display: block;
+}
+html.hp body .bd .wp .mainc {
+  height: 90vh;
+  width: 100%;
+  display: none;
+  position: relative;
+}
+html.hp body .bd .wp .mainc .btoac {
+  grid-template-columns: 1fr 1fr;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs {
+  height: 20em;
+  width: 100%;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc {
+  position: absolute;
+  right: 4%;
+  top: 9%;
+  height: 20em;
+  width: 10em;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  z-index: 5;
+  border-radius: 15px;
+  transition: ease 1s;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui:hover {
+  width: 210px;
+  transition: ease 1s;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
+  width: 220px;
+  display: none;
+  position: absolute;
+  top: 110%;
+  z-index: 6;
+  right: 59%;
+  border-radius: 15px;
+  transition: ease 1s;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2:hover {
+  width: 230px;
+  transition: ease 1s;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
+  width: 120px;
+  display: none;
+  position: absolute;
+  top: 18%;
+  z-index: 1;
+  transition: ease 1s;
+  right: 74%;
+  border-radius: 15px;
+}
+html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
+  width: 160px;
+  transition: ease 1s;
+}
+@media (min-width: 366px) {
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
+    display: block;
+  }
+}
+@media (min-width: 380px) {
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
+    display: block;
+  }
+}
+@media (min-width: 646px) {
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
+    right: 88%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
+    right: 82%;
+  }
+}
+@media (min-width: 746px) {
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
+    width: 180px;
+    right: 94%;
+    top: 9%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
+    width: 190px;
+    transition: ease 1s;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
+    width: 250px;
+    right: 95%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2:hover {
+    width: 260px;
+    transition: ease 1s;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui {
+    width: 230px;
+    right: 0%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui:hover {
+    width: 240px;
+    transition: ease 1s;
+  }
+}
+@media (min-width: 1000px) {
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
+    width: 250px;
+    right: 94%;
+    top: -10%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
+    width: 260px;
+    transition: ease 1s;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
+    width: 220px;
+    top: 120%;
+    right: 120%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2:hover {
+    width: 230px;
+    transition: ease 1s;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui {
+    width: 250px;
+    right: -10%;
+  }
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui:hover {
+    width: 260px;
+    transition: ease 1s;
+  }
+}
+@media (min-width: 1000px) {
+  html.hp body .bd .wp .mainc .btoac .imgbcs .imgc {
+    top: 7%;
+    right: 13%;
+  }
+}
+html.hp body .bd .wp .mainc .btoac .wtc {
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+html.hp body .bd .wp .mainc .btoac .wtc .hbc {
+  position: absolute;
+  top: 32%;
+  left: 5%;
+  z-index: 11;
+}
+html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 300;
+  z-index: 11;
+}
+html.hp body .bd .wp .mainc .btoac .wtc .hbc button {
+  background-color: transparent;
+  border: solid 2px white;
+  padding: 5px;
+  height: 4rem;
+  margin-top: 1rem;
+  width: 250px;
+  z-index: 11;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 300;
+  transition: ease 0.5s;
+  font-size: 18px;
+}
+html.hp body .bd .wp .mainc .btoac .wtc .hbc button:hover {
+  background-color: white;
+  color: #000000;
+  transition: ease 0.5s;
+}
+@media (min-width: 620px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
+    font-size: 36.6px;
+  }
+}
+@media (min-width: 680px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
+    font-size: 39.6px;
+  }
+}
+@media (min-width: 716px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
+    font-size: 46.6px;
+  }
+}
+@media (min-width: 1000px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
+    font-size: 64.6px;
+  }
+}
+@media (min-width: 1200px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
+    font-size: 72.6px;
+  }
+}
+@media (min-width: 816px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc {
+    left: 10%;
+  }
+}
+@media (min-width: 1000px) {
+  html.hp body .bd .wp .mainc .btoac .wtc .hbc {
+    left: 20%;
+  }
+}
+html.hp body .bd .wp .mainc.active {
+  display: block;
+}
+html.hp body .bd .wp .wapp.active {
+  display: block;
+}
+
+html.app {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+}
+html.app body .bd {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+html.app body .bd .wp nav {
+  height: 5rem;
+}
+html.app body .bd .wp nav .ltc {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+html.app body .bd .wp nav .ltc .togglemenuc {
+  position: absolute;
+  right: 8%;
+  top: 2.7%;
+}
+html.app body .bd .wp nav .ltc .togglemenuc .togglemenu {
+  z-index: 100;
+  height: 30px;
+  width: 40px;
+}
+html.app body .bd .wp nav .ltc .togglemenuc .togglemenu span {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+html.app body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp1,
+html.app body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp2 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+  position: absolute;
+  top: 10%;
+  left: -4%;
+  transform: rotate(45deg);
+}
+html.app body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp3 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 11.87px;
+  transform: rotate(-45deg);
+}
+html.app body .bd .wp nav .ltc .lc {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+html.app body .bd .wp nav .ltc .lc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 300;
+}
+html.app body .bd .wp .navm {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: -100%;
+}
+html.app body .bd .wp .navm .enfc {
+  margin-top: 12em;
+}
+html.app body .bd .wp .navm .enfc ul {
+  flex-direction: column;
+  align-items: center;
+}
+html.app body .bd .wp .navm .enfc ul li {
+  margin-top: 5em;
+}
+html.app body .bd .wp .navm .enfc ul li button {
+  background-color: transparent;
+  border: none;
+  font-weight: 200;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 25px;
+}
+html.app body .bd .wp .navm .enfc ul li button:hover {
+  border-bottom: solid 2px white;
+  color: #ffffff;
+}
+@keyframes navmbH {
+  0% {
+    border-bottom: solid 2px white;
+  }
+}
+html.app body .bd .wp .navm.active {
+  top: 6%;
+  display: block;
+}
+html.app body .bd .wapp {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-image: url(./ls.jpg);
+  background-size: cover;
+  background-position: 25%;
+}
+html.app body .bd .wapp .bdim {
+  background-color: rgba(0, 0, 0, 0.3058823529);
+  height: 90vh;
+}
+html.app body .bd .wapp .bdim .container {
+  height: 560px;
+  position: relative;
+  top: 10%;
+  flex-direction: column;
+  align-items: left;
+}
+html.app body .bd .wapp .bdim .container .search {
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+html.app body .bd .wapp .bdim .container .search .si {
+  font-family: "Poppins";
+  font-weight: 500;
+  padding-left: 1rem;
+  border: solid rgba(255, 255, 255, 0.2549019608);
+  width: 60%;
+  height: 30px;
+  border-radius: 15px;
+}
+html.app body .bd .wapp .bdim .container .search .sib {
+  background-color: transparent;
+  border: none;
+}
+html.app body .bd .wapp .bdim .container .search .sib span {
+  width: 50px;
+  height: auto;
+}
+html.app body .bd .wapp .bdim .container .top {
+  width: 300px;
+  height: 350px;
+  padding-left: 1.5rem;
+}
+html.app body .bd .wapp .bdim .container .top .location {
+  margin-top: 3.5rem;
+}
+html.app body .bd .wapp .bdim .container .top .location h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .top .temp h1 {
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .top .description h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+@media (min-width: 550px) {
+  html.app body .bd .wapp .bdim .container .top .temp h1 {
+    font-size: 90px;
+  }
+}
+@media (min-width: 765px) {
+  html.app body .bd .wapp .bdim .container .top .temp h1 {
+    font-size: 105px;
+  }
+}
+@media (min-width: 1005px) {
+  html.app body .bd .wapp .bdim .container .top .description h1 {
+    font-size: 50px;
+  }
+  html.app body .bd .wapp .bdim .container .top .location h1 {
+    font-size: 50px;
+  }
+  html.app body .bd .wapp .bdim .container .top .temp h1 {
+    font-size: 150px;
+  }
+}
+html.app body .bd .wapp .bdim .container .bcontain {
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom {
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.2549019608);
+  width: 305px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .feels {
+  flex-direction: column;
+  align-items: center;
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .feels h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .feels h2 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .humidity h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .humidity h2 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .wind h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp .bdim .container .bcontain .bottom .wind h2 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+html.app body .bd .wapp.active {
+  display: block;
+}
+
+html.au {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+}
+html.au body .bd {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+html.au body .bd .wp nav {
+  height: 5rem;
+}
+html.au body .bd .wp nav .ltc {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+html.au body .bd .wp nav .ltc .togglemenuc {
+  position: absolute;
+  right: 8%;
+  top: 2.7%;
+}
+html.au body .bd .wp nav .ltc .togglemenuc .togglemenu {
+  z-index: 100;
+  height: 30px;
+  width: 40px;
+}
+html.au body .bd .wp nav .ltc .togglemenuc .togglemenu span {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+html.au body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp1,
+html.au body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp2 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+  position: absolute;
+  top: 10%;
+  left: -4%;
+  transform: rotate(45deg);
+}
+html.au body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp3 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 11.87px;
+  transform: rotate(-45deg);
+}
+html.au body .bd .wp nav .ltc .lc {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+html.au body .bd .wp nav .ltc .lc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 300;
+}
+html.au body .bd .wp .navm {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: -100%;
+}
+html.au body .bd .wp .navm .enfc {
+  margin-top: 12em;
+}
+html.au body .bd .wp .navm .enfc ul {
+  flex-direction: column;
+  align-items: center;
+}
+html.au body .bd .wp .navm .enfc ul li {
+  margin-top: 5em;
+}
+html.au body .bd .wp .navm .enfc ul li button {
+  background-color: transparent;
+  border: none;
+  font-weight: 200;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 25px;
+}
+html.au body .bd .wp .navm .enfc ul li button.cw {
+  border: solid #ffffff 2px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+html.au body .bd .wp .navm .enfc ul li button:hover {
+  border-bottom: solid 2px white;
+  color: #ffffff;
+}
+@keyframes navmbH {
+  0% {
+    border-bottom: solid 2px white;
+  }
+}
+html.au body .bd .wp .navm.active {
+  top: 6%;
+  display: block;
+}
+html.au body .bd .wp .hts {
+  width: 100%;
+  z-index: 1;
+  height: 200px;
+  background-image: url(/app/styling/forest2.jpg);
+}
+html.au body .bd .wp .hts .h1fc {
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 2em;
+  padding-top: 4em;
+}
+html.au body .bd .wp .hts .h1fc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+html.au body .bd .wp .mainc .pcmc {
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 3.7em;
+}
+html.au body .bd .wp .mainc .pcmc p {
+  color: #ffffff;
+  font-weight: 200;
+  font-family: "Poppins";
+  font-size: 16px;
+}
+@media (min-width: 1273px) {
+  html.au body .bd .wp .mainc .pcmc {
+    padding-left: 12em;
+    padding-right: 12em;
+  }
+}
+@media (min-width: 1443px) {
+  html.au body .bd .wp .mainc .pcmc {
+    padding-left: 16em;
+    padding-right: 16em;
+  }
+}
+
+html.cu {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+}
+html.cu body .bd {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+html.cu body .bd .wp nav {
+  height: 5rem;
+}
+html.cu body .bd .wp nav .ltc {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+html.cu body .bd .wp nav .ltc .togglemenuc {
+  position: absolute;
+  right: 8%;
+  top: 2.7%;
+}
+html.cu body .bd .wp nav .ltc .togglemenuc .togglemenu {
+  z-index: 100;
+  height: 30px;
+  width: 40px;
+}
+html.cu body .bd .wp nav .ltc .togglemenuc .togglemenu span {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+html.cu body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp1,
+html.cu body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp2 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 8px;
+  position: absolute;
+  top: 10%;
+  left: -4%;
+  transform: rotate(45deg);
+}
+html.cu body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp3 {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #ffffff;
+  margin-top: 11.87px;
+  transform: rotate(-45deg);
+}
+html.cu body .bd .wp nav .ltc .lc {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+html.cu body .bd .wp nav .ltc .lc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 300;
+}
+html.cu body .bd .wp .navm {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: -100%;
+}
+html.cu body .bd .wp .navm .enfc {
+  margin-top: 12em;
+}
+html.cu body .bd .wp .navm .enfc ul {
+  flex-direction: column;
+  align-items: center;
+}
+html.cu body .bd .wp .navm .enfc ul li {
+  margin-top: 5em;
+}
+html.cu body .bd .wp .navm .enfc ul li button {
+  background-color: transparent;
+  border: none;
+  font-weight: 200;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 25px;
+}
+html.cu body .bd .wp .navm .enfc ul li button.cw {
+  border: solid #ffffff 2px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+html.cu body .bd .wp .navm .enfc ul li button:hover {
+  border-bottom: solid 2px white;
+  color: #ffffff;
+}
+@keyframes navmbH {
+  0% {
+    border-bottom: solid 2px white;
+  }
+}
+html.cu body .bd .wp .navm.active {
+  top: 6%;
+  display: block;
+}
+html.cu body .bd .wp .hts {
+  width: 100%;
+  z-index: 1;
+  height: 200px;
+  background-image: url(/app/styling/forest2.jpg);
+}
+html.cu body .bd .wp .hts .h1fc {
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 2em;
+  padding-top: 4em;
+}
+html.cu body .bd .wp .hts .h1fc h1 {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+html.cu body .bd .wp .mainc ul {
+  padding-left: 1.3em;
+  padding-top: 5em;
+}
+html.cu body .bd .wp .mainc ul li {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 300;
+  padding-top: 2em;
+}
+html.cu body .bd .wp .mainc ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}/*# sourceMappingURL=app.css.map */
