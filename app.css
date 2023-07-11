@@ -156,13 +156,13 @@ html.hp body .bd .wp .mainc .btoac .imgbcs {
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs .imgc {
   position: absolute;
-  right: 4%;
-  top: 9%;
+  right: 2%;
+  top: 5%;
   height: 20em;
   width: 10em;
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui {
-  width: 200px;
+  width: 150px;
   position: absolute;
   top: 50%;
   right: 10%;
@@ -175,7 +175,7 @@ html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui:hover {
   transition: ease 1s;
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
-  width: 220px;
+  width: 110px;
   display: none;
   position: absolute;
   top: 110%;
@@ -185,7 +185,7 @@ html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
   transition: ease 1s;
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2:hover {
-  width: 230px;
+  width: 150px;
   transition: ease 1s;
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
@@ -195,11 +195,11 @@ html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
   top: 18%;
   z-index: 1;
   transition: ease 1s;
-  right: 74%;
+  right: 57%;
   border-radius: 15px;
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
-  width: 160px;
+  width: 140px;
   transition: ease 1s;
 }
 @media (min-width: 366px) {
@@ -207,7 +207,7 @@ html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
     display: block;
   }
 }
-@media (min-width: 380px) {
+@media (min-width: 375px) {
   html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
     display: block;
   }
@@ -231,15 +231,16 @@ html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
     transition: ease 1s;
   }
   html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2 {
-    width: 250px;
-    right: 95%;
+    width: 180px;
+    right: 90%;
+    top: 100%;
   }
   html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui2:hover {
     width: 260px;
     transition: ease 1s;
   }
   html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui {
-    width: 230px;
+    width: 220px;
     right: 0%;
   }
   html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui:hover {
@@ -247,7 +248,7 @@ html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3:hover {
     transition: ease 1s;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   html.hp body .bd .wp .mainc .btoac .imgbcs .imgc .fui3 {
     width: 250px;
     right: 94%;
@@ -363,16 +364,16 @@ html.hp body .bd .wp .wapp.active {
 
 html.app {
   background-color: #000000;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 html.app body .bd {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
 }
 html.app body .bd .wp nav {
-  height: 5rem;
+  height: 10vh;
 }
 html.app body .bd .wp nav .ltc {
   flex-direction: row;
