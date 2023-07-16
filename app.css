@@ -29,14 +29,14 @@ select:focus {
 }
 
 html.hp {
-  background-color: #000000;
+  background-color: #292929;
   height: 100vh;
   width: 100vw;
 }
 html.hp body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: #292929;
 }
 html.hp body .bd .wp nav {
   height: 5rem;
@@ -95,16 +95,11 @@ html.hp body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.hp body .bd .wp .navm {
-  background-color: #000000;
-  height: 100vh;
+  background-color: #292929;
+  height: 90vh;
   width: 100%;
   display: none;
   z-index: 100;
-  position: fixed;
-  top: -100%;
-}
-html.hp body .bd .wp .navm .enfc {
-  margin-top: 12em;
 }
 html.hp body .bd .wp .navm .enfc ul {
   flex-direction: column;
@@ -119,7 +114,8 @@ html.hp body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 25px;
+  font-size: 10px;
+  transition: ease-in 0.4s;
 }
 html.hp body .bd .wp .navm .enfc ul li button.cw {
   border: solid #ffffff 2px;
@@ -127,14 +123,37 @@ html.hp body .bd .wp .navm .enfc ul li button.cw {
   padding-bottom: 24px;
   padding-left: 50px;
   padding-right: 50px;
+  transition: ease-in 0.4s;
+}
+html.hp body .bd .wp .navm .enfc ul li button.cw:hover {
+  border: solid #ffffff 2px;
+  background-color: #ffffff;
+  color: #292929;
+  transition: ease-in 0.4s;
 }
 html.hp body .bd .wp .navm .enfc ul li button:hover {
   border-bottom: solid 2px white;
+  transition: ease-in 0.4s;
   color: #ffffff;
 }
 @keyframes navmbH {
   0% {
     border-bottom: solid 2px white;
+  }
+}
+@media (min-height: 470px) {
+  html.hp body .bd .wp .navm .enfc ul li button {
+    font-size: 20px;
+  }
+}
+@media (min-height: 590px) {
+  html.hp body .bd .wp .navm .enfc ul li {
+    margin-top: 7em;
+  }
+}
+@media (min-height: 630px) {
+  html.hp body .bd .wp .navm .enfc ul li {
+    margin-top: 8em;
   }
 }
 html.hp body .bd .wp .navm.active {
@@ -144,7 +163,6 @@ html.hp body .bd .wp .navm.active {
 html.hp body .bd .wp .mainc {
   height: 90vh;
   width: 100%;
-  display: none;
   position: relative;
 }
 html.hp body .bd .wp .mainc .btoac {
@@ -317,7 +335,7 @@ html.hp body .bd .wp .mainc .btoac .wtc .hbc button {
 }
 html.hp body .bd .wp .mainc .btoac .wtc .hbc button:hover {
   background-color: white;
-  color: #000000;
+  color: #292929;
   transition: ease 0.5s;
 }
 @media (min-width: 620px) {
@@ -355,22 +373,19 @@ html.hp body .bd .wp .mainc .btoac .wtc .hbc button:hover {
     left: 20%;
   }
 }
-html.hp body .bd .wp .mainc.active {
-  display: block;
-}
-html.hp body .bd .wp .wapp.active {
-  display: block;
+html.hp body .bd .wp .mainc.dea {
+  display: none;
 }
 
 html.app {
-  background-color: #000000;
+  background-color: #292929;
   height: 100%;
   width: 100vw;
 }
 html.app body .bd {
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: #292929;
 }
 html.app body .bd .wp nav {
   height: 10vh;
@@ -429,16 +444,11 @@ html.app body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.app body .bd .wp .navm {
-  background-color: #000000;
-  height: 100vh;
+  background-color: #292929;
+  height: 90vh;
   width: 100%;
   display: none;
   z-index: 100;
-  position: fixed;
-  top: -100%;
-}
-html.app body .bd .wp .navm .enfc {
-  margin-top: 12em;
 }
 html.app body .bd .wp .navm .enfc ul {
   flex-direction: column;
@@ -453,7 +463,8 @@ html.app body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 25px;
+  font-size: 10px;
+  transition: ease-in 0.4s;
 }
 html.app body .bd .wp .navm .enfc ul li button.cw {
   border: solid #ffffff 2px;
@@ -461,9 +472,17 @@ html.app body .bd .wp .navm .enfc ul li button.cw {
   padding-bottom: 24px;
   padding-left: 50px;
   padding-right: 50px;
+  transition: ease-in 0.4s;
+}
+html.app body .bd .wp .navm .enfc ul li button.cw:hover {
+  border: solid #ffffff 2px;
+  background-color: #ffffff;
+  color: #292929;
+  transition: ease-in 0.4s;
 }
 html.app body .bd .wp .navm .enfc ul li button:hover {
   border-bottom: solid 2px white;
+  transition: ease-in 0.4s;
   color: #ffffff;
 }
 @keyframes navmbH {
@@ -471,33 +490,45 @@ html.app body .bd .wp .navm .enfc ul li button:hover {
     border-bottom: solid 2px white;
   }
 }
+@media (min-height: 470px) {
+  html.app body .bd .wp .navm .enfc ul li button {
+    font-size: 20px;
+  }
+}
+@media (min-height: 590px) {
+  html.app body .bd .wp .navm .enfc ul li {
+    margin-top: 7em;
+  }
+}
+@media (min-height: 630px) {
+  html.app body .bd .wp .navm .enfc ul li {
+    margin-top: 8em;
+  }
+}
 html.app body .bd .wp .navm.active {
   top: 6%;
   display: block;
 }
 html.app body .bd .wapp {
-  overflow: hidden;
   position: relative;
+  height: -moz-max-content;
+  height: max-content;
   width: 100%;
-  height: 90vh;
-  background-image: url(./ls.jpg);
-  background-size: cover;
-  background-position: 25%;
+  height: 80vh;
 }
 html.app body .bd .wapp .bdim {
   background-color: rgba(0, 0, 0, 0.3058823529);
-  height: 90vh;
+  height: 80vh;
 }
 html.app body .bd .wapp .bdim .container {
-  height: 560px;
   position: relative;
-  top: 10%;
   flex-direction: column;
   align-items: left;
 }
 html.app body .bd .wapp .bdim .container .search {
   flex-direction: row;
   width: 100%;
+  padding-top: 2em;
   justify-content: center;
 }
 html.app body .bd .wapp .bdim .container .search .si {
@@ -516,9 +547,10 @@ html.app body .bd .wapp .bdim .container .search .sib {
 html.app body .bd .wapp .bdim .container .search .sib span {
   width: 50px;
   height: auto;
+  cursor: pointer;
 }
 html.app body .bd .wapp .bdim .container .top {
-  width: 300px;
+  width: 90%;
   height: 350px;
   padding-left: 1.5rem;
 }
@@ -543,6 +575,15 @@ html.app body .bd .wapp .bdim .container .top .description h1 {
   font-weight: 300;
   font-family: "Poppins";
 }
+html.app body .bd .wapp .bdim .container .top .advice {
+  margin-top: 1rem;
+}
+html.app body .bd .wapp .bdim .container .top .advice h1 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Poppins";
+}
 @media (min-width: 550px) {
   html.app body .bd .wapp .bdim .container .top .temp h1 {
     font-size: 90px;
@@ -555,7 +596,7 @@ html.app body .bd .wapp .bdim .container .top .description h1 {
 }
 @media (min-width: 1005px) {
   html.app body .bd .wapp .bdim .container .top .description h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
   html.app body .bd .wapp .bdim .container .top .location h1 {
     font-size: 50px;
@@ -564,75 +605,75 @@ html.app body .bd .wapp .bdim .container .top .description h1 {
     font-size: 150px;
   }
 }
-html.app body .bd .wapp .bdim .container .bcontain {
-  flex-direction: row;
-  justify-content: center;
-  position: fixed;
-  bottom: 5%;
-  left: 2%;
+html.app body .bd .bcontain {
+  position: absolute;
+  top: 50%;
+  height: 10vh;
+  position: relative;
+  background-color: #292929;
+  overflow: hidden;
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom {
+html.app body .bd .bcontain .bottom {
   flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.2549019608);
-  width: 305px;
-  height: 60px;
-  border-radius: 10px;
+  width: 100%;
   text-align: center;
   justify-content: space-evenly;
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .feels {
+html.app body .bd .bcontain .bottom .feels {
   flex-direction: column;
   align-items: center;
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .feels h1 {
+html.app body .bd .bcontain .bottom .feels h1 {
   color: #ffffff;
   font-size: 20px;
   font-weight: 300;
   font-family: "Poppins";
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .feels h2 {
+html.app body .bd .bcontain .bottom .feels h2 {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
   font-family: "Poppins";
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .humidity h1 {
+html.app body .bd .bcontain .bottom .humidity h1 {
   color: #ffffff;
   font-size: 20px;
   font-weight: 300;
   font-family: "Poppins";
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .humidity h2 {
+html.app body .bd .bcontain .bottom .humidity h2 {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
   font-family: "Poppins";
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .wind h1 {
+html.app body .bd .bcontain .bottom .wind h1 {
   color: #ffffff;
   font-size: 20px;
   font-weight: 300;
   font-family: "Poppins";
 }
-html.app body .bd .wapp .bdim .container .bcontain .bottom .wind h2 {
+html.app body .bd .bcontain .bottom .wind h2 {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
   font-family: "Poppins";
 }
-html.app body .bd .wapp.active {
-  display: block;
+html.app body .bd .wapp.dea {
+  display: none;
+}
+html.app body .bd .bcontain.dea {
+  display: none;
 }
 
 html.au {
-  background-color: #000000;
+  background-color: #292929;
   height: 100vh;
   width: 100vw;
 }
 html.au body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
 }
 html.au body .bd .wp nav {
   height: 5rem;
@@ -691,16 +732,11 @@ html.au body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.au body .bd .wp .navm {
-  background-color: #000000;
-  height: 100vh;
+  background-color: #292929;
+  height: 90vh;
   width: 100%;
   display: none;
   z-index: 100;
-  position: fixed;
-  top: -100%;
-}
-html.au body .bd .wp .navm .enfc {
-  margin-top: 12em;
 }
 html.au body .bd .wp .navm .enfc ul {
   flex-direction: column;
@@ -715,7 +751,8 @@ html.au body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 25px;
+  font-size: 10px;
+  transition: ease-in 0.4s;
 }
 html.au body .bd .wp .navm .enfc ul li button.cw {
   border: solid #ffffff 2px;
@@ -723,14 +760,37 @@ html.au body .bd .wp .navm .enfc ul li button.cw {
   padding-bottom: 24px;
   padding-left: 50px;
   padding-right: 50px;
+  transition: ease-in 0.4s;
+}
+html.au body .bd .wp .navm .enfc ul li button.cw:hover {
+  border: solid #ffffff 2px;
+  background-color: #ffffff;
+  color: #292929;
+  transition: ease-in 0.4s;
 }
 html.au body .bd .wp .navm .enfc ul li button:hover {
   border-bottom: solid 2px white;
+  transition: ease-in 0.4s;
   color: #ffffff;
 }
 @keyframes navmbH {
   0% {
     border-bottom: solid 2px white;
+  }
+}
+@media (min-height: 470px) {
+  html.au body .bd .wp .navm .enfc ul li button {
+    font-size: 20px;
+  }
+}
+@media (min-height: 590px) {
+  html.au body .bd .wp .navm .enfc ul li {
+    margin-top: 7em;
+  }
+}
+@media (min-height: 630px) {
+  html.au body .bd .wp .navm .enfc ul li {
+    margin-top: 8em;
   }
 }
 html.au body .bd .wp .navm.active {
@@ -753,6 +813,9 @@ html.au body .bd .wp .hts .h1fc h1 {
   color: #ffffff;
   font-family: "Poppins";
   font-weight: 300;
+}
+html.au body .bd .wp .hts.dea {
+  display: none;
 }
 html.au body .bd .wp .mainc .pcmc {
   flex-direction: row;
@@ -779,16 +842,19 @@ html.au body .bd .wp .mainc .pcmc p {
     padding-right: 16em;
   }
 }
+html.au body .bd .wp .mainc.dea {
+  display: none;
+}
 
 html.cu {
-  background-color: #000000;
+  background-color: #292929;
   height: 100vh;
   width: 100vw;
 }
 html.cu body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: #292929;
 }
 html.cu body .bd .wp nav {
   height: 5rem;
@@ -847,16 +913,11 @@ html.cu body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.cu body .bd .wp .navm {
-  background-color: #000000;
-  height: 100vh;
+  background-color: #292929;
+  height: 90vh;
   width: 100%;
   display: none;
   z-index: 100;
-  position: fixed;
-  top: -100%;
-}
-html.cu body .bd .wp .navm .enfc {
-  margin-top: 12em;
 }
 html.cu body .bd .wp .navm .enfc ul {
   flex-direction: column;
@@ -871,7 +932,8 @@ html.cu body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 25px;
+  font-size: 10px;
+  transition: ease-in 0.4s;
 }
 html.cu body .bd .wp .navm .enfc ul li button.cw {
   border: solid #ffffff 2px;
@@ -879,14 +941,37 @@ html.cu body .bd .wp .navm .enfc ul li button.cw {
   padding-bottom: 24px;
   padding-left: 50px;
   padding-right: 50px;
+  transition: ease-in 0.4s;
+}
+html.cu body .bd .wp .navm .enfc ul li button.cw:hover {
+  border: solid #ffffff 2px;
+  background-color: #ffffff;
+  color: #292929;
+  transition: ease-in 0.4s;
 }
 html.cu body .bd .wp .navm .enfc ul li button:hover {
   border-bottom: solid 2px white;
+  transition: ease-in 0.4s;
   color: #ffffff;
 }
 @keyframes navmbH {
   0% {
     border-bottom: solid 2px white;
+  }
+}
+@media (min-height: 470px) {
+  html.cu body .bd .wp .navm .enfc ul li button {
+    font-size: 20px;
+  }
+}
+@media (min-height: 590px) {
+  html.cu body .bd .wp .navm .enfc ul li {
+    margin-top: 7em;
+  }
+}
+@media (min-height: 630px) {
+  html.cu body .bd .wp .navm .enfc ul li {
+    margin-top: 8em;
   }
 }
 html.cu body .bd .wp .navm.active {
@@ -910,6 +995,9 @@ html.cu body .bd .wp .hts .h1fc h1 {
   font-family: "Poppins";
   font-weight: 300;
 }
+html.cu body .bd .wp .hts.dea {
+  display: none;
+}
 html.cu body .bd .wp .mainc ul {
   padding-left: 1.3em;
   padding-top: 5em;
@@ -923,4 +1011,7 @@ html.cu body .bd .wp .mainc ul li {
 html.cu body .bd .wp .mainc ul li a {
   color: #ffffff;
   text-decoration: none;
+}
+html.cu body .bd .wp .mainc.dea {
+  display: none;
 }/*# sourceMappingURL=app.css.map */

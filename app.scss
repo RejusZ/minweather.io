@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100&display=swap");
 
-$b: #000000;
+$b: #292929;
 $bt: #0000004e;
 $bd: #ffffff41;
 $w: #ffffff;
@@ -119,53 +119,67 @@ html.hp {
 
         .navm {
           background-color: $b;
-          height: 100vh;
+          height: 90vh;
           width: 100%;
           display: none;
           z-index: 100;
-          position: fixed;
-          top: -100%;
           .enfc {
-            margin-top: 12em;
             ul {
               flex-direction: column;
               align-items: center;
               li {
                 margin-top: 5em;
-
                 button {
                   background-color: transparent;
                   border: none;
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 25px;
+                  font-size: 10px;
+                  transition: ease-in 0.4s;
                 }
-
                 button.cw {
                   border: solid $w 2px;
                   padding-top: 24px;
                   padding-bottom: 24px;
                   padding-left: 50px;
                   padding-right: 50px;
+                  transition: ease-in 0.4s;
                 }
-
+                button.cw:hover {
+                  border: solid $w 2px;
+                  background-color: $w;
+                  color: $b;
+                  transition: ease-in 0.4s;
+                }
                 button:hover {
                   border-bottom: solid 2px #ffff;
-
+                  transition: ease-in 0.4s;
                   color: $w;
                 }
-
                 @keyframes navmbH {
                   0% {
                     border-bottom: solid 2px #ffff;
                   }
-
                   50% {
                   }
-
                   100% {
                   }
+                }
+                @media (min-height: 470px) {
+                  button {
+                    font-size: 20px;
+                  }
+                }
+              }
+              @media (min-height: 590px) {
+                li {
+                  margin-top: 7em;
+                }
+              }
+              @media (min-height: 630px) {
+                li {
+                  margin-top: 8em;
                 }
               }
             }
@@ -180,7 +194,7 @@ html.hp {
         .mainc {
           height: 90vh;
           width: 100%;
-          display: none;
+
           position: relative;
 
           .btoac {
@@ -430,12 +444,8 @@ html.hp {
           }
         }
 
-        .mainc.active {
-          display: block;
-        }
-
-        .wapp.active {
-          display: block;
+        .mainc.dea {
+          display: none;
         }
       }
     }
@@ -522,14 +532,11 @@ html.app {
 
         .navm {
           background-color: $b;
-          height: 100vh;
+          height: 90vh;
           width: 100%;
           display: none;
           z-index: 100;
-          position: fixed;
-          top: -100%;
           .enfc {
-            margin-top: 12em;
             ul {
               flex-direction: column;
               align-items: center;
@@ -542,7 +549,8 @@ html.app {
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 25px;
+                  font-size: 10px;
+                  transition: ease-in 0.4s;
                 }
 
                 button.cw {
@@ -551,11 +559,19 @@ html.app {
                   padding-bottom: 24px;
                   padding-left: 50px;
                   padding-right: 50px;
+                  transition: ease-in 0.4s;
+                }
+
+                button.cw:hover {
+                  border: solid $w 2px;
+                  background-color: $w;
+                  color: $b;
+                  transition: ease-in 0.4s;
                 }
 
                 button:hover {
                   border-bottom: solid 2px #ffff;
-
+                  transition: ease-in 0.4s;
                   color: $w;
                 }
 
@@ -570,6 +586,24 @@ html.app {
                   100% {
                   }
                 }
+
+                @media (min-height: 470px) {
+                  button {
+                    font-size: 20px;
+                  }
+                }
+              }
+
+              @media (min-height: 590px) {
+                li {
+                  margin-top: 7em;
+                }
+              }
+
+              @media (min-height: 630px) {
+                li {
+                  margin-top: 8em;
+                }
               }
             }
           }
@@ -581,21 +615,16 @@ html.app {
         }
       }
       .wapp {
-        overflow: hidden;
         position: relative;
+        height: max-content;
         width: 100%;
-        height: 90vh;
-        background-image: url(./ls.jpg);
-        background-size: cover;
-        background-position: 25%;
+        height: 80vh;
 
         .bdim {
           background-color: $bt;
-          height: 90vh;
+          height: 80vh;
           .container {
-            height: 560px;
             position: relative;
-            top: 10%;
             flex-direction: column;
             align-items: left;
 
@@ -603,6 +632,7 @@ html.app {
               flex-direction: row;
               width: 100%;
 
+              padding-top: 2em;
               justify-content: center;
               .si {
                 font-family: "Poppins";
@@ -621,12 +651,13 @@ html.app {
                 span {
                   width: 50px;
                   height: auto;
+                  cursor: pointer;
                 }
               }
             }
 
             .top {
-              width: 300px;
+              width: 90%;
               height: 350px;
 
               padding-left: 1.5rem;
@@ -659,6 +690,17 @@ html.app {
                 }
               }
 
+              .advice {
+                margin-top: 1rem;
+                h1 {
+                  color: $w;
+                  font-size: 18px;
+                  font-weight: 300;
+                  font-family: "Poppins";
+                  // transform: rotate(-90deg);
+                }
+              }
+
               @media (min-width: 550px) {
                 .temp {
                   h1 {
@@ -678,7 +720,7 @@ html.app {
               @media (min-width: 1005px) {
                 .description {
                   h1 {
-                    font-size: 50px;
+                    font-size: 45px;
                   }
                 }
 
@@ -695,84 +737,83 @@ html.app {
                 }
               }
             }
+          }
+        }
+      }
 
-            .bcontain {
-              flex-direction: row;
-              justify-content: center;
-              position: fixed;
-              bottom: 5%;
-              left: 2%;
-              .bottom {
-                flex-direction: row;
-                background-color: $bd;
-                width: 305px;
-                height: 60px;
-                border-radius: 10px;
-                text-align: center;
-                justify-content: space-evenly;
-                .feels {
-                  flex-direction: column;
-                  align-items: center;
-                  h1 {
-                    color: $w;
-                    font-size: 20px;
-                    font-weight: 300;
-                    font-family: "Poppins";
-                  }
+      .bcontain {
+        position: absolute;
+        top: 50%;
+        height: 10vh;
+        // width: 100vw;
+        position: relative;
+        background-color: $b;
+        overflow: hidden;
 
-                  h2 {
-                    color: $w;
-                    font-size: 15px;
-                    font-weight: 300;
-                    font-family: "Poppins";
-                  }
-                }
+        .bottom {
+          flex-direction: row;
+          width: 100%;
 
-                .humidity {
-                  h1 {
-                    color: $w;
-                    font-size: 20px;
-                    font-weight: 300;
-                    font-family: "Poppins";
-                  }
+          text-align: center;
+          justify-content: space-evenly;
+          .feels {
+            flex-direction: column;
+            align-items: center;
+            h1 {
+              color: $w;
+              font-size: 20px;
+              font-weight: 300;
+              font-family: "Poppins";
+            }
 
-                  h2 {
-                    color: $w;
-                    font-size: 15px;
-                    font-weight: 300;
-                    font-family: "Poppins";
-                  }
-                }
+            h2 {
+              color: $w;
+              font-size: 15px;
+              font-weight: 300;
+              font-family: "Poppins";
+            }
+          }
 
-                .wind {
-                  h1 {
-                    color: $w;
-                    font-size: 20px;
-                    font-weight: 300;
-                    font-family: "Poppins";
-                  }
+          .humidity {
+            h1 {
+              color: $w;
+              font-size: 20px;
+              font-weight: 300;
+              font-family: "Poppins";
+            }
 
-                  h2 {
-                    color: $w;
-                    font-size: 15px;
-                    font-weight: 300;
-                    font-family: "Poppins";
-                  }
-                }
-              }
+            h2 {
+              color: $w;
+              font-size: 15px;
+              font-weight: 300;
+              font-family: "Poppins";
+            }
+          }
+
+          .wind {
+            h1 {
+              color: $w;
+              font-size: 20px;
+              font-weight: 300;
+              font-family: "Poppins";
+            }
+
+            h2 {
+              color: $w;
+              font-size: 15px;
+              font-weight: 300;
+              font-family: "Poppins";
             }
           }
         }
       }
 
-      // @media (min-height: 480px) {
-      //   .wapp {
-      //     height: 83.4vh;
-      //   }
-      // }
+      .wapp.dea {
+        display: none;
+      }
 
-      .wapp.active {
-        display: block;
+      .bcontain.dea {
+        display: none;
       }
     }
   }
@@ -787,7 +828,6 @@ html.au {
     .bd {
       width: 100vw;
       height: 100vh;
-      background-color: $b;
 
       .wp {
         nav {
@@ -858,52 +898,67 @@ html.au {
 
         .navm {
           background-color: $b;
-          height: 100vh;
+          height: 90vh;
           width: 100%;
           display: none;
           z-index: 100;
-          position: fixed;
-          top: -100%;
           .enfc {
-            margin-top: 12em;
             ul {
               flex-direction: column;
               align-items: center;
               li {
                 margin-top: 5em;
-
                 button {
                   background-color: transparent;
                   border: none;
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 25px;
+                  font-size: 10px;
+                  transition: ease-in 0.4s;
                 }
-
                 button.cw {
                   border: solid $w 2px;
                   padding-top: 24px;
                   padding-bottom: 24px;
                   padding-left: 50px;
                   padding-right: 50px;
+                  transition: ease-in 0.4s;
                 }
-
+                button.cw:hover {
+                  border: solid $w 2px;
+                  background-color: $w;
+                  color: $b;
+                  transition: ease-in 0.4s;
+                }
                 button:hover {
                   border-bottom: solid 2px #ffff;
+                  transition: ease-in 0.4s;
                   color: $w;
                 }
-
                 @keyframes navmbH {
                   0% {
                     border-bottom: solid 2px #ffff;
                   }
-
                   50% {
                   }
-
                   100% {
                   }
+                }
+                @media (min-height: 470px) {
+                  button {
+                    font-size: 20px;
+                  }
+                }
+              }
+              @media (min-height: 590px) {
+                li {
+                  margin-top: 7em;
+                }
+              }
+              @media (min-height: 630px) {
+                li {
+                  margin-top: 8em;
                 }
               }
             }
@@ -932,6 +987,10 @@ html.au {
               font-weight: 300;
             }
           }
+        }
+
+        .hts.dea {
+          display: none;
         }
         .mainc {
           .pcmc {
@@ -962,6 +1021,10 @@ html.au {
               padding-right: 16em;
             }
           }
+        }
+
+        .mainc.dea {
+          display: none;
         }
       }
     }
@@ -1048,52 +1111,67 @@ html.cu {
 
         .navm {
           background-color: $b;
-          height: 100vh;
+          height: 90vh;
           width: 100%;
           display: none;
           z-index: 100;
-          position: fixed;
-          top: -100%;
           .enfc {
-            margin-top: 12em;
             ul {
               flex-direction: column;
               align-items: center;
               li {
                 margin-top: 5em;
-
                 button {
                   background-color: transparent;
                   border: none;
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 25px;
+                  font-size: 10px;
+                  transition: ease-in 0.4s;
                 }
-
                 button.cw {
                   border: solid $w 2px;
                   padding-top: 24px;
                   padding-bottom: 24px;
                   padding-left: 50px;
                   padding-right: 50px;
+                  transition: ease-in 0.4s;
                 }
-
+                button.cw:hover {
+                  border: solid $w 2px;
+                  background-color: $w;
+                  color: $b;
+                  transition: ease-in 0.4s;
+                }
                 button:hover {
                   border-bottom: solid 2px #ffff;
+                  transition: ease-in 0.4s;
                   color: $w;
                 }
-
                 @keyframes navmbH {
                   0% {
                     border-bottom: solid 2px #ffff;
                   }
-
                   50% {
                   }
-
                   100% {
                   }
+                }
+                @media (min-height: 470px) {
+                  button {
+                    font-size: 20px;
+                  }
+                }
+              }
+              @media (min-height: 590px) {
+                li {
+                  margin-top: 7em;
+                }
+              }
+              @media (min-height: 630px) {
+                li {
+                  margin-top: 8em;
                 }
               }
             }
@@ -1123,6 +1201,10 @@ html.cu {
             }
           }
         }
+
+        .hts.dea {
+          display: none;
+        }
         .mainc {
           ul {
             padding-left: 1.3em;
@@ -1138,6 +1220,10 @@ html.cu {
               }
             }
           }
+        }
+
+        .mainc.dea {
+          display: none;
         }
       }
     }
