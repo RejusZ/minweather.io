@@ -28,7 +28,6 @@ async function checkWeather(city) {
 
   // shows all info
   console.log(data);
-
   // coneverts all data into text
   document.querySelector(".lh ").innerHTML = data.name;
   document.querySelector(".tt").innerHTML =
@@ -40,14 +39,6 @@ async function checkWeather(city) {
   document.querySelector(".h2").innerHTML = data.main.humidity + "%";
   document.querySelector(".wt").innerHTML = data.wind.speed + "KMH";
   document.querySelector(".dt").innerHTML = data.weather[0].description;
-
-  if (data.main.temp === 24.4) {
-    document.querySelector(".at").innerHTML =
-      "Please wear a coat and have an umbrella";
-  } else {
-    document.querySelector(".at").innerHTML =
-      "You can wear light clothes today";
-  }
 }
 
 searchBtn.addEventListener("click", () => {

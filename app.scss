@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100&display=swap");
 
-$b: #292929;
+$b: #2e2d2d;
 $bt: #0000004e;
 $bd: #ffffff41;
 $w: #ffffff;
@@ -621,7 +621,7 @@ html.app {
         height: 80vh;
 
         .bdim {
-          background-color: $bt;
+          // background-color: $bt;
           height: 80vh;
           .container {
             position: relative;

@@ -29,14 +29,14 @@ select:focus {
 }
 
 html.hp {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 100vh;
   width: 100vw;
 }
 html.hp body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #292929;
+  background-color: #2e2d2d;
 }
 html.hp body .bd .wp nav {
   height: 5rem;
@@ -95,7 +95,7 @@ html.hp body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.hp body .bd .wp .navm {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 90vh;
   width: 100%;
   display: none;
@@ -128,7 +128,7 @@ html.hp body .bd .wp .navm .enfc ul li button.cw {
 html.hp body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #292929;
+  color: #2e2d2d;
   transition: ease-in 0.4s;
 }
 html.hp body .bd .wp .navm .enfc ul li button:hover {
@@ -335,7 +335,7 @@ html.hp body .bd .wp .mainc .btoac .wtc .hbc button {
 }
 html.hp body .bd .wp .mainc .btoac .wtc .hbc button:hover {
   background-color: white;
-  color: #292929;
+  color: #2e2d2d;
   transition: ease 0.5s;
 }
 @media (min-width: 620px) {
@@ -378,14 +378,14 @@ html.hp body .bd .wp .mainc.dea {
 }
 
 html.app {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 100%;
   width: 100vw;
 }
 html.app body .bd {
   width: 100%;
   height: 100%;
-  background-color: #292929;
+  background-color: #2e2d2d;
 }
 html.app body .bd .wp nav {
   height: 10vh;
@@ -444,7 +444,7 @@ html.app body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.app body .bd .wp .navm {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 90vh;
   width: 100%;
   display: none;
@@ -477,7 +477,7 @@ html.app body .bd .wp .navm .enfc ul li button.cw {
 html.app body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #292929;
+  color: #2e2d2d;
   transition: ease-in 0.4s;
 }
 html.app body .bd .wp .navm .enfc ul li button:hover {
@@ -517,7 +517,6 @@ html.app body .bd .wapp {
   height: 80vh;
 }
 html.app body .bd .wapp .bdim {
-  background-color: rgba(0, 0, 0, 0.3058823529);
   height: 80vh;
 }
 html.app body .bd .wapp .bdim .container {
@@ -610,7 +609,7 @@ html.app body .bd .bcontain {
   top: 50%;
   height: 10vh;
   position: relative;
-  background-color: #292929;
+  background-color: #2e2d2d;
   overflow: hidden;
 }
 html.app body .bd .bcontain .bottom {
@@ -667,7 +666,7 @@ html.app body .bd .bcontain.dea {
 }
 
 html.au {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 100vh;
   width: 100vw;
 }
@@ -732,7 +731,7 @@ html.au body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.au body .bd .wp .navm {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 90vh;
   width: 100%;
   display: none;
@@ -765,7 +764,7 @@ html.au body .bd .wp .navm .enfc ul li button.cw {
 html.au body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #292929;
+  color: #2e2d2d;
   transition: ease-in 0.4s;
 }
 html.au body .bd .wp .navm .enfc ul li button:hover {
@@ -847,14 +846,14 @@ html.au body .bd .wp .mainc.dea {
 }
 
 html.cu {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 100vh;
   width: 100vw;
 }
 html.cu body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #292929;
+  background-color: #2e2d2d;
 }
 html.cu body .bd .wp nav {
   height: 5rem;
@@ -913,7 +912,7 @@ html.cu body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.cu body .bd .wp .navm {
-  background-color: #292929;
+  background-color: #2e2d2d;
   height: 90vh;
   width: 100%;
   display: none;
@@ -946,7 +945,7 @@ html.cu body .bd .wp .navm .enfc ul li button.cw {
 html.cu body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #292929;
+  color: #2e2d2d;
   transition: ease-in 0.4s;
 }
 html.cu body .bd .wp .navm .enfc ul li button:hover {
