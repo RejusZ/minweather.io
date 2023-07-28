@@ -29,14 +29,14 @@ select:focus {
 }
 
 html.hp {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 100vh;
   width: 100vw;
 }
 html.hp body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #2e2d2d;
+  background-color: #000000;
 }
 html.hp body .bd .wp nav {
   height: 5rem;
@@ -95,7 +95,7 @@ html.hp body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.hp body .bd .wp .navm {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 90vh;
   width: 100%;
   display: none;
@@ -128,7 +128,7 @@ html.hp body .bd .wp .navm .enfc ul li button.cw {
 html.hp body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #2e2d2d;
+  color: #000000;
   transition: ease-in 0.4s;
 }
 html.hp body .bd .wp .navm .enfc ul li button:hover {
@@ -335,7 +335,7 @@ html.hp body .bd .wp .mainc .btoac .wtc .hbc button {
 }
 html.hp body .bd .wp .mainc .btoac .wtc .hbc button:hover {
   background-color: white;
-  color: #2e2d2d;
+  color: #000000;
   transition: ease 0.5s;
 }
 @media (min-width: 620px) {
@@ -378,14 +378,14 @@ html.hp body .bd .wp .mainc.dea {
 }
 
 html.app {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 100%;
   width: 100vw;
 }
 html.app body .bd {
   width: 100%;
   height: 100%;
-  background-color: #2e2d2d;
+  background-color: #000000;
 }
 html.app body .bd .wp nav {
   height: 10vh;
@@ -444,7 +444,7 @@ html.app body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.app body .bd .wp .navm {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 90vh;
   width: 100%;
   display: none;
@@ -477,7 +477,7 @@ html.app body .bd .wp .navm .enfc ul li button.cw {
 html.app body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #2e2d2d;
+  color: #000000;
   transition: ease-in 0.4s;
 }
 html.app body .bd .wp .navm .enfc ul li button:hover {
@@ -609,7 +609,7 @@ html.app body .bd .bcontain {
   top: 50%;
   height: 10vh;
   position: relative;
-  background-color: #2e2d2d;
+  background-color: #000000;
   overflow: hidden;
 }
 html.app body .bd .bcontain .bottom {
@@ -666,7 +666,7 @@ html.app body .bd .bcontain.dea {
 }
 
 html.au {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 100vh;
   width: 100vw;
 }
@@ -731,7 +731,7 @@ html.au body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.au body .bd .wp .navm {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 90vh;
   width: 100%;
   display: none;
@@ -764,7 +764,7 @@ html.au body .bd .wp .navm .enfc ul li button.cw {
 html.au body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #2e2d2d;
+  color: #000000;
   transition: ease-in 0.4s;
 }
 html.au body .bd .wp .navm .enfc ul li button:hover {
@@ -846,14 +846,14 @@ html.au body .bd .wp .mainc.dea {
 }
 
 html.cu {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 100vh;
   width: 100vw;
 }
 html.cu body .bd {
   width: 100vw;
   height: 100vh;
-  background-color: #2e2d2d;
+  background-color: #000000;
 }
 html.cu body .bd .wp nav {
   height: 5rem;
@@ -912,7 +912,7 @@ html.cu body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.cu body .bd .wp .navm {
-  background-color: #2e2d2d;
+  background-color: #000000;
   height: 90vh;
   width: 100%;
   display: none;
@@ -945,7 +945,7 @@ html.cu body .bd .wp .navm .enfc ul li button.cw {
 html.cu body .bd .wp .navm .enfc ul li button.cw:hover {
   border: solid #ffffff 2px;
   background-color: #ffffff;
-  color: #2e2d2d;
+  color: #000000;
   transition: ease-in 0.4s;
 }
 html.cu body .bd .wp .navm .enfc ul li button:hover {
