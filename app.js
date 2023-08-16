@@ -6,6 +6,8 @@ const wappM = document.querySelector(".wapp");
 const bwappM = document.querySelector(".bcontain");
 const mainC = document.querySelector(".mainc");
 
+require("dotenv").config;
+
 navToggle.addEventListener("click", () => {
   navToggle.classList.toggle("active");
   navM.classList.toggle("active");
@@ -13,7 +15,7 @@ navToggle.addEventListener("click", () => {
   bwappM.classList.toggle("dea");
 });
 
-const apiweatherKey = "d068896eca8b807bc1375137360ce002";
+const apiweatherKey = process.env.API_KEY;
 const apiweatherUrl =
   "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
 const searchBox = document.querySelector(".search input");
