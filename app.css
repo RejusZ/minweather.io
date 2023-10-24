@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100&display=swap");
+::-moz-selection {
+  background: #000000;
+}
+::selection {
+  background: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #393939;
+  border-radius: 25px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -29,15 +49,19 @@ select:focus {
 }
 
 html.hp {
-  background-color: #000000;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
 html.hp body .bd {
+  background-image: url(/m2.jpg);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   background-color: #000000;
+}
+html.hp body .bd .wp {
+  background-color: rgba(0, 0, 0, 0.4078431373);
 }
 html.hp body .bd .wp nav {
   height: 5rem;
@@ -51,6 +75,7 @@ html.hp body .bd .wp nav .ltc .togglemenuc {
   position: absolute;
   right: 8%;
   top: 2.7%;
+  z-index: 1000;
 }
 html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu {
   z-index: 100;
@@ -87,6 +112,7 @@ html.hp body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp3 {
 html.hp body .bd .wp nav .ltc .lc {
   position: absolute;
   top: 3%;
+  z-index: 1000;
   left: 5%;
 }
 html.hp body .bd .wp nav .ltc .lc h1 {
@@ -96,18 +122,23 @@ html.hp body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.hp body .bd .wp .navm {
+  opacity: 0;
+  pointer-events: none;
   background-color: #000000;
-  height: 90vh;
+  height: 101vh;
+  transform: translateY(-105%);
+  transform: ease 0.5s;
+  transition: ease 0.5s;
   width: 100%;
-  display: none;
-  z-index: 100;
+  z-index: 1;
 }
 html.hp body .bd .wp .navm .enfc ul {
+  padding-top: 10vh;
   flex-direction: column;
   align-items: center;
 }
 html.hp body .bd .wp .navm .enfc ul li {
-  margin-top: 5em;
+  margin-top: 7em;
 }
 html.hp body .bd .wp .navm .enfc ul li button {
   background-color: transparent;
@@ -115,7 +146,7 @@ html.hp body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 10px;
+  font-size: 15px;
   transition: ease-in 0.4s;
 }
 html.hp body .bd .wp .navm .enfc ul li button.cw {
@@ -147,6 +178,11 @@ html.hp body .bd .wp .navm .enfc ul li button:hover {
     font-size: 20px;
   }
 }
+@media (max-height: 550px) {
+  html.hp body .bd .wp .navm .enfc ul li {
+    margin-top: 5em;
+  }
+}
 @media (min-height: 590px) {
   html.hp body .bd .wp .navm .enfc ul li {
     margin-top: 7em;
@@ -158,17 +194,21 @@ html.hp body .bd .wp .navm .enfc ul li button:hover {
   }
 }
 html.hp body .bd .wp .navm.active {
-  top: 6%;
-  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-13vh);
+  transform: ease 0.5s;
+  transition: ease 0.5s;
 }
 html.hp body .bd .wp .mainc {
-  height: 90vh;
+  height: 91vh;
+  top: 5em;
   width: 100%;
   overflow: hidden;
-  position: relative;
+  position: fixed;
 }
 html.hp body .bd .wp .mainc .btoac {
-  grid-template-columns: 1fr 1fr;
+  height: 91vh;
   overflow: hidden;
 }
 html.hp body .bd .wp .mainc .btoac .imgbcs {
@@ -289,6 +329,11 @@ html.hp body .bd .wp .mainc .btoac .wtc .hbc h1 {
   font-weight: 300;
   z-index: 11;
 }
+html.hp body .bd .wp .mainc .btoac .wtc .hbc span {
+  color: #393939;
+  font-family: "Poppins";
+  text-align: justify;
+}
 html.hp body .bd .wp .mainc .btoac .wtc .hbc button {
   background-color: transparent;
   border: solid 2px white;
@@ -351,24 +396,33 @@ html.app {
   background-color: #000000;
   height: 100%;
   width: 100vw;
+  overflow: hidden;
 }
 html.app body .bd {
+  background-image: url(/m2.jpg);
+  background-size: cover;
   width: 100%;
   height: 100%;
   background-color: #000000;
 }
+html.app body .bd .wp {
+  background-color: rgba(0, 0, 0, 0.4078431373);
+}
 html.app body .bd .wp nav {
   height: 10vh;
+  z-index: 1000;
 }
 html.app body .bd .wp nav .ltc {
   flex-direction: row;
   justify-content: space-between;
   padding-left: 1rem;
+  z-index: 1000;
 }
 html.app body .bd .wp nav .ltc .togglemenuc {
   position: absolute;
   right: 8%;
   top: 2.7%;
+  z-index: 1000;
 }
 html.app body .bd .wp nav .ltc .togglemenuc .togglemenu {
   z-index: 100;
@@ -405,6 +459,7 @@ html.app body .bd .wp nav .ltc .togglemenuc .togglemenu.active .sp3 {
 html.app body .bd .wp nav .ltc .lc {
   position: absolute;
   top: 3%;
+  z-index: 1000;
   left: 5%;
 }
 html.app body .bd .wp nav .ltc .lc h1 {
@@ -414,18 +469,23 @@ html.app body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.app body .bd .wp .navm {
+  opacity: 0;
+  pointer-events: none;
   background-color: #000000;
-  height: 90vh;
+  height: 101vh;
+  transform: translateY(-100%);
+  transform: ease 0.5s;
+  transition: ease 0.5s;
   width: 100%;
-  display: none;
-  z-index: 100;
+  z-index: 1;
 }
 html.app body .bd .wp .navm .enfc ul {
+  padding-top: 10vh;
   flex-direction: column;
   align-items: center;
 }
 html.app body .bd .wp .navm .enfc ul li {
-  margin-top: 5em;
+  margin-top: 7em;
 }
 html.app body .bd .wp .navm .enfc ul li button {
   background-color: transparent;
@@ -433,7 +493,7 @@ html.app body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 10px;
+  font-size: 15px;
   transition: ease-in 0.4s;
 }
 html.app body .bd .wp .navm .enfc ul li button.cw {
@@ -465,6 +525,11 @@ html.app body .bd .wp .navm .enfc ul li button:hover {
     font-size: 20px;
   }
 }
+@media (max-height: 550px) {
+  html.app body .bd .wp .navm .enfc ul li {
+    margin-top: 5em;
+  }
+}
 @media (min-height: 590px) {
   html.app body .bd .wp .navm .enfc ul li {
     margin-top: 7em;
@@ -476,11 +541,15 @@ html.app body .bd .wp .navm .enfc ul li button:hover {
   }
 }
 html.app body .bd .wp .navm.active {
-  top: 6%;
-  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-10vh);
+  transform: ease 0.5s;
+  transition: ease 0.5s;
 }
 html.app body .bd .wapp {
-  position: relative;
+  position: absolute;
+  top: 10vh;
   height: -moz-max-content;
   height: max-content;
   width: 100%;
@@ -504,7 +573,7 @@ html.app body .bd .wapp .bdim .container .search .si {
   font-family: "Poppins";
   font-weight: 500;
   padding-left: 1rem;
-  border: solid rgba(255, 255, 255, 0.2549019608);
+  border: none;
   width: 60%;
   height: 30px;
   border-radius: 15px;
@@ -576,10 +645,9 @@ html.app body .bd .wapp .bdim .container .top .advice h1 {
 }
 html.app body .bd .bcontain {
   position: absolute;
-  top: 50%;
+  top: 90%;
   height: 10vh;
-  position: relative;
-  background-color: #000000;
+  width: 100vw;
   overflow: hidden;
 }
 html.app body .bd .bcontain .bottom {
@@ -638,11 +706,14 @@ html.app body .bd .bcontain.dea {
 html.au {
   background-color: #000000;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 html.au body .bd {
-  width: 100vw;
   height: 100vh;
+}
+html.au body .bd .wp {
+  height: -moz-max-content;
+  height: max-content;
 }
 html.au body .bd .wp nav {
   height: 5rem;
@@ -656,6 +727,7 @@ html.au body .bd .wp nav .ltc .togglemenuc {
   position: absolute;
   right: 8%;
   top: 2.7%;
+  z-index: 1000;
 }
 html.au body .bd .wp nav .ltc .togglemenuc .togglemenu {
   z-index: 100;
@@ -693,6 +765,7 @@ html.au body .bd .wp nav .ltc .lc {
   position: absolute;
   top: 3%;
   left: 5%;
+  z-index: 1000;
 }
 html.au body .bd .wp nav .ltc .lc h1 {
   color: #ffffff;
@@ -701,18 +774,23 @@ html.au body .bd .wp nav .ltc .lc h1 {
   font-weight: 300;
 }
 html.au body .bd .wp .navm {
+  opacity: 0;
+  pointer-events: none;
   background-color: #000000;
-  height: 90vh;
+  height: 101vh;
+  transform: translateY(-105%);
+  transform: ease 0.5s;
+  transition: ease 0.5s;
   width: 100%;
-  display: none;
-  z-index: 100;
+  z-index: 1;
 }
 html.au body .bd .wp .navm .enfc ul {
+  padding-top: 10vh;
   flex-direction: column;
   align-items: center;
 }
 html.au body .bd .wp .navm .enfc ul li {
-  margin-top: 5em;
+  margin-top: 7em;
 }
 html.au body .bd .wp .navm .enfc ul li button {
   background-color: transparent;
@@ -720,7 +798,7 @@ html.au body .bd .wp .navm .enfc ul li button {
   font-weight: 200;
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 10px;
+  font-size: 15px;
   transition: ease-in 0.4s;
 }
 html.au body .bd .wp .navm .enfc ul li button.cw {
@@ -752,6 +830,11 @@ html.au body .bd .wp .navm .enfc ul li button:hover {
     font-size: 20px;
   }
 }
+@media (max-height: 550px) {
+  html.au body .bd .wp .navm .enfc ul li {
+    margin-top: 5em;
+  }
+}
 @media (min-height: 590px) {
   html.au body .bd .wp .navm .enfc ul li {
     margin-top: 7em;
@@ -763,55 +846,62 @@ html.au body .bd .wp .navm .enfc ul li button:hover {
   }
 }
 html.au body .bd .wp .navm.active {
-  top: 6%;
-  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-15vh);
+  transform: ease 0.5s;
+  transition: ease 0.5s;
 }
-html.au body .bd .wp .hts {
+html.au body .bd .wp .aucwp {
+  position: absolute;
+  top: 10vh;
+}
+html.au body .bd .wp .aucwp .hts {
   width: 100%;
   z-index: 1;
   height: 200px;
   background-image: url(forest2.jpg);
 }
-html.au body .bd .wp .hts .h1fc {
+html.au body .bd .wp .aucwp .hts .h1fc {
   flex-direction: row;
   justify-content: left;
   padding-left: 2em;
   padding-top: 4em;
 }
-html.au body .bd .wp .hts .h1fc h1 {
+html.au body .bd .wp .aucwp .hts .h1fc h1 {
   color: #ffffff;
   font-family: "Poppins";
   font-weight: 300;
 }
-html.au body .bd .wp .hts.dea {
+html.au body .bd .wp .aucwp .hts.dea {
   display: none;
 }
-html.au body .bd .wp .mainc .pcmc {
+html.au body .bd .wp .aucwp .mainc .pcmc {
   flex-direction: row;
   justify-content: center;
   padding-left: 3em;
   padding-right: 3em;
   padding-top: 3.7em;
 }
-html.au body .bd .wp .mainc .pcmc p {
+html.au body .bd .wp .aucwp .mainc .pcmc p {
   color: #ffffff;
   font-weight: 200;
   font-family: "Poppins";
   font-size: 16px;
 }
 @media (min-width: 1273px) {
-  html.au body .bd .wp .mainc .pcmc {
+  html.au body .bd .wp .aucwp .mainc .pcmc {
     padding-left: 12em;
     padding-right: 12em;
   }
 }
 @media (min-width: 1443px) {
-  html.au body .bd .wp .mainc .pcmc {
+  html.au body .bd .wp .aucwp .mainc .pcmc {
     padding-left: 16em;
     padding-right: 16em;
   }
 }
-html.au body .bd .wp .mainc.dea {
+html.au body .bd .wp .aucwp .mainc.dea {
   display: none;
 }
 

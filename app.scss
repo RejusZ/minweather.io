@@ -3,9 +3,28 @@
 
 $b: #000000;
 $bt: #0000004e;
-$bd: #ffffff41;
+$bd: #00000068;
+$bdd: #000000c6;
+$g: #393939;
 $w: #ffffff;
 $b2: #3f779a;
+
+::selection {
+  background: $b;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $g;
+  border-radius: 25px;
+}
 
 * {
   padding: 0;
@@ -36,7 +55,6 @@ select:focus {
 }
 
 html.hp {
-  background-color: $b;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -47,14 +65,16 @@ html.hp {
     // width: 100vw;
 
     .bd {
+      background-image: url(/m2.jpg);
+      background-size: cover;
       width: 100vw;
       height: 100vh;
       background-color: $b;
 
       .wp {
+        background-color: $bd;
         nav {
           height: 5rem;
-
           .ltc {
             flex-direction: row;
             justify-content: space-between;
@@ -64,6 +84,7 @@ html.hp {
               position: absolute;
               right: 8%;
               top: 2.7%;
+              z-index: 1000;
 
               .togglemenu {
                 z-index: 100;
@@ -107,6 +128,8 @@ html.hp {
             .lc {
               position: absolute;
               top: 3%;
+              z-index: 1000;
+
               left: 5%;
               h1 {
                 color: $w;
@@ -119,26 +142,34 @@ html.hp {
         }
 
         .navm {
+          opacity: 0;
+          pointer-events: none;
           background-color: $b;
-          height: 90vh;
+          height: 101vh;
+          transform: translateY(-105%);
+          transform: ease 0.5s;
+          transition: ease 0.5s;
           width: 100%;
-          display: none;
-          z-index: 100;
+          z-index: 1;
+
           .enfc {
             ul {
+              padding-top: 10vh;
               flex-direction: column;
               align-items: center;
               li {
-                margin-top: 5em;
+                margin-top: 7em;
+
                 button {
                   background-color: transparent;
                   border: none;
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 10px;
+                  font-size: 15px;
                   transition: ease-in 0.4s;
                 }
+
                 button.cw {
                   border: solid $w 2px;
                   padding-top: 24px;
@@ -147,37 +178,51 @@ html.hp {
                   padding-right: 50px;
                   transition: ease-in 0.4s;
                 }
+
                 button.cw:hover {
                   border: solid $w 2px;
                   background-color: $w;
                   color: $b;
                   transition: ease-in 0.4s;
                 }
+
                 button:hover {
                   border-bottom: solid 2px #ffff;
                   transition: ease-in 0.4s;
                   color: $w;
                 }
+
                 @keyframes navmbH {
                   0% {
                     border-bottom: solid 2px #ffff;
                   }
+
                   50% {
                   }
+
                   100% {
                   }
                 }
+
                 @media (min-height: 470px) {
                   button {
                     font-size: 20px;
                   }
                 }
               }
+
+              @media (max-height: 550px) {
+                li {
+                  margin-top: 5em;
+                }
+              }
+
               @media (min-height: 590px) {
                 li {
                   margin-top: 7em;
                 }
               }
+
               @media (min-height: 630px) {
                 li {
                   margin-top: 8em;
@@ -188,18 +233,23 @@ html.hp {
         }
 
         .navm.active {
-          top: 6%;
-          display: block;
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(-13vh);
+          transform: ease 0.5s;
+          transition: ease 0.5s;
         }
 
         .mainc {
-          height: 90vh;
+          height: 91vh;
+          top: 5em;
           width: 100%;
           overflow: hidden;
-          position: relative;
+          position: fixed;
 
           .btoac {
-            grid-template-columns: 1fr 1fr;
+            height: 91vh;
+            // grid-template-columns: 1fr 1fr;
             overflow: hidden;
             .imgbcs {
               height: 80vh;
@@ -373,6 +423,12 @@ html.hp {
                   z-index: 11;
                 }
 
+                span {
+                  color: $g;
+                  font-family: "Poppins";
+                  text-align: justify;
+                }
+
                 button {
                   background-color: transparent;
                   border: solid 2px #ffff;
@@ -452,26 +508,32 @@ html.app {
   background-color: $b;
   height: 100%;
   width: 100vw;
+  overflow: hidden;
 
   body {
     .bd {
+      background-image: url(/m2.jpg);
+      background-size: cover;
       width: 100%;
       height: 100%;
       background-color: $b;
 
       .wp {
+        background-color: $bd;
+
         nav {
           height: 10vh;
-
+          z-index: 1000;
           .ltc {
             flex-direction: row;
             justify-content: space-between;
             padding-left: 1rem;
-
+            z-index: 1000;
             .togglemenuc {
               position: absolute;
               right: 8%;
               top: 2.7%;
+              z-index: 1000;
 
               .togglemenu {
                 z-index: 100;
@@ -515,6 +577,7 @@ html.app {
             .lc {
               position: absolute;
               top: 3%;
+              z-index: 1000;
               left: 5%;
               h1 {
                 color: $w;
@@ -527,17 +590,23 @@ html.app {
         }
 
         .navm {
+          opacity: 0;
+          pointer-events: none;
           background-color: $b;
-          height: 90vh;
+          height: 101vh;
+          transform: translateY(-100%);
+          transform: ease 0.5s;
+          transition: ease 0.5s;
           width: 100%;
-          display: none;
-          z-index: 100;
+          z-index: 1;
+
           .enfc {
             ul {
+              padding-top: 10vh;
               flex-direction: column;
               align-items: center;
               li {
-                margin-top: 5em;
+                margin-top: 7em;
 
                 button {
                   background-color: transparent;
@@ -545,7 +614,7 @@ html.app {
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 10px;
+                  font-size: 15px;
                   transition: ease-in 0.4s;
                 }
 
@@ -590,6 +659,12 @@ html.app {
                 }
               }
 
+              @media (max-height: 550px) {
+                li {
+                  margin-top: 5em;
+                }
+              }
+
               @media (min-height: 590px) {
                 li {
                   margin-top: 7em;
@@ -606,12 +681,16 @@ html.app {
         }
 
         .navm.active {
-          top: 6%;
-          display: block;
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(-10vh);
+          transform: ease 0.5s;
+          transition: ease 0.5s;
         }
       }
       .wapp {
-        position: relative;
+        position: absolute;
+        top: 10vh;
         height: max-content;
         width: 100%;
         height: 80vh;
@@ -634,7 +713,7 @@ html.app {
                 font-family: "Poppins";
                 font-weight: 500;
                 padding-left: 1rem;
-                border: solid $bd;
+                border: none;
                 width: 60%;
                 height: 30px;
                 border-radius: 15px;
@@ -739,11 +818,10 @@ html.app {
 
       .bcontain {
         position: absolute;
-        top: 50%;
+        top: 90%;
         height: 10vh;
-        // width: 100vw;
-        position: relative;
-        background-color: $b;
+        width: 100vw;
+        // background-color: $b;
         overflow: hidden;
 
         .bottom {
@@ -818,14 +896,16 @@ html.app {
 html.au {
   background-color: $b;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 
   body {
     .bd {
-      width: 100vw;
+      // width: 90%;
       height: 100vh;
 
       .wp {
+        // width: 80%;
+        height: max-content;
         nav {
           height: 5rem;
 
@@ -838,6 +918,7 @@ html.au {
               position: absolute;
               right: 8%;
               top: 2.7%;
+              z-index: 1000;
 
               .togglemenu {
                 z-index: 100;
@@ -882,6 +963,8 @@ html.au {
               position: absolute;
               top: 3%;
               left: 5%;
+              z-index: 1000;
+
               h1 {
                 color: $w;
                 font-family: "Poppins";
@@ -893,26 +976,34 @@ html.au {
         }
 
         .navm {
+          opacity: 0;
+          pointer-events: none;
           background-color: $b;
-          height: 90vh;
+          height: 101vh;
+          transform: translateY(-105%);
+          transform: ease 0.5s;
+          transition: ease 0.5s;
           width: 100%;
-          display: none;
-          z-index: 100;
+          z-index: 1;
+
           .enfc {
             ul {
+              padding-top: 10vh;
               flex-direction: column;
               align-items: center;
               li {
-                margin-top: 5em;
+                margin-top: 7em;
+
                 button {
                   background-color: transparent;
                   border: none;
                   font-weight: 200;
                   color: $w;
                   font-family: "Poppins";
-                  font-size: 10px;
+                  font-size: 15px;
                   transition: ease-in 0.4s;
                 }
+
                 button.cw {
                   border: solid $w 2px;
                   padding-top: 24px;
@@ -921,37 +1012,51 @@ html.au {
                   padding-right: 50px;
                   transition: ease-in 0.4s;
                 }
+
                 button.cw:hover {
                   border: solid $w 2px;
                   background-color: $w;
                   color: $b;
                   transition: ease-in 0.4s;
                 }
+
                 button:hover {
                   border-bottom: solid 2px #ffff;
                   transition: ease-in 0.4s;
                   color: $w;
                 }
+
                 @keyframes navmbH {
                   0% {
                     border-bottom: solid 2px #ffff;
                   }
+
                   50% {
                   }
+
                   100% {
                   }
                 }
+
                 @media (min-height: 470px) {
                   button {
                     font-size: 20px;
                   }
                 }
               }
+
+              @media (max-height: 550px) {
+                li {
+                  margin-top: 5em;
+                }
+              }
+
               @media (min-height: 590px) {
                 li {
                   margin-top: 7em;
                 }
               }
+
               @media (min-height: 630px) {
                 li {
                   margin-top: 8em;
@@ -962,65 +1067,75 @@ html.au {
         }
 
         .navm.active {
-          top: 6%;
-          display: block;
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(-15vh);
+          transform: ease 0.5s;
+          transition: ease 0.5s;
         }
 
-        .hts {
-          width: 100%;
-          z-index: 1;
-          height: 200px;
-          background-image: url(forest2.jpg);
+        .aucwp {
+          position: absolute;
+          top: 10vh;
+          .hts {
+            width: 100%;
+            z-index: 1;
+            height: 200px;
+            background-image: url(forest2.jpg);
 
-          .h1fc {
-            flex-direction: row;
-            justify-content: left;
-            padding-left: 2em;
-            padding-top: 4em;
-            h1 {
-              color: $w;
-              font-family: "Poppins";
-              font-weight: 300;
-            }
-          }
-        }
+            .h1fc {
+              flex-direction: row;
+              justify-content: left;
 
-        .hts.dea {
-          display: none;
-        }
-        .mainc {
-          .pcmc {
-            flex-direction: row;
-            justify-content: center;
-            padding-left: 3em;
-            padding-right: 3em;
-            padding-top: 3.7em;
+              padding-left: 2em;
+              padding-top: 4em;
+              // overflow: hidden;
 
-            p {
-              color: $w;
-              font-weight: 200;
-              font-family: "Poppins";
-              font-size: 16px;
+              h1 {
+                color: $w;
+                font-family: "Poppins";
+                font-weight: 300;
+              }
             }
           }
 
-          @media (min-width: 1273px) {
+          .hts.dea {
+            display: none;
+          }
+          .mainc {
             .pcmc {
-              padding-left: 12em;
-              padding-right: 12em;
+              flex-direction: row;
+              justify-content: center;
+              padding-left: 3em;
+              padding-right: 3em;
+              padding-top: 3.7em;
+
+              p {
+                color: $w;
+                font-weight: 200;
+                font-family: "Poppins";
+                font-size: 16px;
+              }
+            }
+
+            @media (min-width: 1273px) {
+              .pcmc {
+                padding-left: 12em;
+                padding-right: 12em;
+              }
+            }
+
+            @media (min-width: 1443px) {
+              .pcmc {
+                padding-left: 16em;
+                padding-right: 16em;
+              }
             }
           }
 
-          @media (min-width: 1443px) {
-            .pcmc {
-              padding-left: 16em;
-              padding-right: 16em;
-            }
+          .mainc.dea {
+            display: none;
           }
-        }
-
-        .mainc.dea {
-          display: none;
         }
       }
     }
