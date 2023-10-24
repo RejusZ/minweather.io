@@ -39,6 +39,7 @@ html.hp {
   background-color: $b;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 
   body {
     // background-color: $w;
@@ -194,32 +195,34 @@ html.hp {
         .mainc {
           height: 90vh;
           width: 100%;
-
+          overflow: hidden;
           position: relative;
 
           .btoac {
             grid-template-columns: 1fr 1fr;
-
+            overflow: hidden;
             .imgbcs {
-              height: 20em;
+              height: 80vh;
+              position: relative;
 
               width: 100%;
 
               .imgc {
+                display: none;
                 position: absolute;
-                right: 2%;
-                top: 5%;
+                height: 80vh;
+                width: 100%;
+                right: 23%;
+                top: 15%;
                 height: 20em;
                 width: 10em;
 
                 .fui {
                   width: 150px;
-                  position: absolute;
-                  top: 50%;
-                  right: 10%;
                   z-index: 5;
                   border-radius: 15px;
                   transition: ease 1s;
+                  transform: translateX(-2vw) translateY(10vh);
                 }
 
                 .fui:hover {
@@ -230,12 +233,13 @@ html.hp {
                 .fui2 {
                   width: 110px;
                   display: none;
-                  position: absolute;
+                  // position: absolute;
                   top: 110%;
                   z-index: 6;
                   right: 59%;
                   border-radius: 15px;
                   transition: ease 1s;
+                  transform: translateY(-7vh) translateX(-10vw);
                 }
 
                 .fui2:hover {
@@ -246,11 +250,10 @@ html.hp {
                 .fui3 {
                   width: 120px;
                   display: none;
-                  position: absolute;
-                  top: 18%;
                   z-index: 1;
                   transition: ease 1s;
-                  right: 57%;
+                  transform: translateY(-70vh) translateX(-6vw);
+
                   border-radius: 15px;
                 }
 
@@ -281,32 +284,61 @@ html.hp {
                   }
                 }
 
-                @media (min-width: 746px) {
+                // @media (min-width: 746px) {
+                //   .fui3 {
+                //     width: 140px;
+                //   }
+
+                //   .fui3:hover {
+                //     width: 150px;
+                //     transition: ease 1s;
+                //   }
+
+                //   .fui2 {
+                //     width: 160px;
+                //     right: 90%;
+                //     top: 100%;
+                //   }
+
+                //   .fui2:hover {
+                //     width: 170px;
+                //     transition: ease 1s;
+                //   }
+
+                //   .fui {
+                //     width: 200px;
+                //     right: 0%;
+                //   }
+
+                //   .fui:hover {
+                //     width: 210px;
+                //     transition: ease 1s;
+                //   }
+                // }
+
+                @media (min-width: 900px) {
                   .fui3 {
-                    width: 180px;
-                    right: 94%;
-                    top: 9%;
+                    width: 160px;
+                    transform: translateY(-42em) translateX(-6vw);
                   }
 
                   .fui3:hover {
-                    width: 190px;
+                    width: 170px;
                     transition: ease 1s;
                   }
 
                   .fui2 {
-                    width: 180px;
-                    right: 90%;
-                    top: 100%;
+                    width: 190px;
+                    transform: translateY(-9em) translateX(-6vw);
                   }
 
                   .fui2:hover {
-                    width: 260px;
+                    width: 200px;
                     transition: ease 1s;
                   }
 
                   .fui {
-                    width: 220px;
-                    right: 0%;
+                    width: 230px;
                   }
 
                   .fui:hover {
@@ -314,46 +346,11 @@ html.hp {
                     transition: ease 1s;
                   }
                 }
-
-                @media (min-width: 900px) {
-                  .fui3 {
-                    width: 250px;
-                    right: 94%;
-                    top: -10%;
-                  }
-
-                  .fui3:hover {
-                    width: 260px;
-                    transition: ease 1s;
-                  }
-
-                  .fui2 {
-                    width: 220px;
-                    top: 120%;
-                    right: 120%;
-                  }
-
-                  .fui2:hover {
-                    width: 230px;
-                    transition: ease 1s;
-                  }
-
-                  .fui {
-                    width: 250px;
-                    right: -10%;
-                  }
-
-                  .fui:hover {
-                    width: 260px;
-                    transition: ease 1s;
-                  }
-                }
               }
 
-              @media (min-width: 1000px) {
+              @media (min-width: 550px) {
                 .imgc {
-                  top: 7%;
-                  right: 13%;
+                  display: block;
                 }
               }
             }
@@ -366,9 +363,8 @@ html.hp {
               height: 90vh;
 
               .hbc {
-                position: absolute;
-                top: 32%;
-                left: 5%;
+                margin-top: 20vh;
+                margin-left: 5vw;
                 z-index: 11;
                 h1 {
                   color: $w;
@@ -418,13 +414,13 @@ html.hp {
 
                 @media (min-width: 1000px) {
                   h1 {
-                    font-size: 64.6px;
+                    font-size: 54.6px;
                   }
                 }
 
                 @media (min-width: 1200px) {
                   h1 {
-                    font-size: 72.6px;
+                    font-size: 65.6px;
                   }
                 }
               }
